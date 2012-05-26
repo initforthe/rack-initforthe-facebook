@@ -1,15 +1,15 @@
-= RACK middleware:
+# RACK middleware:
 
-== SignedRequest
+## SignedRequest
 
 Parses the Facebook signed requests into the RACK environment.
 Currently doesn't validate the request signature.
 
-== MethodFix
+## MethodFix
 
 Corrects Facebook POST to GET for signed requests.
 
-== LikeGate [url]
+## LikeGate [url]
 
 Redirects users to the specified like gate URL if they haven't liked the page.
 
