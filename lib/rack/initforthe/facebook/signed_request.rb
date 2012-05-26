@@ -14,6 +14,8 @@ module Rack
           @app.call(env)
         end
 
+        private
+
         def parse_signature(signed_request)
           signature, data = signed_request.split('.', 2)
           data << '=' while data.length % 4 > 0
