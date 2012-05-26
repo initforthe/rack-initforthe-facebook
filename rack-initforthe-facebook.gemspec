@@ -1,15 +1,15 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "rack-initforthe-facebook/version"
+require "rack/initforthe/facebook/version"
 
 Gem::Specification.new do |s|
   s.name        = "rack-initforthe-facebook"
   s.version     = Rack::Initforthe::Facebook::VERSION
   s.authors     = ["Rob Holland"]
   s.email       = ["rob@initforthe.com"]
-  s.homepage    = ""
-  s.summary     = %q{Rack helpers for facebook applications}
-  s.description = %q{Rack helpers for facebook applications}
+  s.homepage    = "http://github.com/initforthe/rack-initforthe-facebook"
+  s.summary     = %q{Rack middleware for Facebook applications}
+  s.description = %q{Rack middleware for Facebook applications}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
