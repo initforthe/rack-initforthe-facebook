@@ -1,5 +1,3 @@
-require "rack-initforthe-facebook/version"
-
 module Rack
   module Initforthe
     module Facebook
