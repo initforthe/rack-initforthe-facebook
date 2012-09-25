@@ -2,8 +2,15 @@
 
 ## SignedRequest
 
-Parses the Facebook signed requests into the RACK environment.
-Currently doesn't validate the request signature.
+Parses a Facebook signed request or oauth cookie and stores it in the RACK environment.
+In order to parse an fbsr_APP_ID cookie you'll need to pass the :app_id => X option to the middleware.
+This option can be a lambda, in case you have the app ID stored in such a way that it's not available at rackup parsing time.
+
+For example, if you are using rails_config, you might configure SignedRequest like so:
+
+use Rack::Initforthe::Facebook::SignedRequest, app_id: -> { Settings.facebook.app_id }
+
+Note: Currently the signature is not validated.
 
 ## MethodFix
 
