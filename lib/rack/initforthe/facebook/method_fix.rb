@@ -7,7 +7,8 @@ module Rack
         end
 
         def call(env)
-          if env['facebook.signed_request'] && env['REQUEST_METHOD'] == 'POST'
+          request = Request.new(env)
+          if !request.params['signed_request'].nil? && env['REQUEST_METHOD'] == 'POST'
             env['REQUEST_METHOD'] = 'GET'
           end
           @app.call(env)
